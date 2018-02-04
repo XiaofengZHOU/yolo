@@ -4,6 +4,18 @@ import numpy
 from PIL import Image, ImageDraw
 
 def read_text_data(file_name):
+    """
+    result example:
+    [ [    '/media/zxf/Data/document_ML/ML/yolo/data/VOCtrainval_06-Nov-2007/VOCdevkit/VOC2007/JPEGImages/000005.jpg',
+           ['263', '211', '324', '339', '8'],
+           ['165', '264', '253', '372', '8'],
+           ['5', '244', '67', '374', '8'],
+           ['241', '194', '295', '299', '8'],
+           ['277', '186', '312', '220', '8\n'] ],
+      [    '/media/zxf/Data/document_ML/ML/yolo/data/VOCtrainval_06-Nov-2007/VOCdevkit/VOC2007/JPEGImages/000007.jpg',
+           ['141', '50', '500', '330', '6\n'] ] 
+    ]
+    """
     f = open(file_name,'r')
     lines = f.readlines()
     data_list = []
