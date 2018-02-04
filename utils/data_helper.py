@@ -67,3 +67,16 @@ def reshape_image(bunding_boxes,img_size,img=None,img_path=None):
         bunding_boxes_new.append(box_new)
 
     return res,bunding_boxes_new
+
+
+def get_labels(bunding_boxes):
+    labels = []
+    for box in bunding_boxes :
+        x_center = (box[0]+ box[2])/2
+        y_center = (box[1]+ box[3])/2
+        box_w    = (box[2]- box[0])
+        box_h    = (box[3]- box[1])
+        class_id = box[4]
+        label    = [x_center,y_center,box_w,box_h,class_id]
+        labels.append(label)
+    return labels
