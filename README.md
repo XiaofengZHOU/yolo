@@ -1,4 +1,4 @@
-# yolo
+# yolo implementation with pytorch
 
 ## dataset VOC2007
 
